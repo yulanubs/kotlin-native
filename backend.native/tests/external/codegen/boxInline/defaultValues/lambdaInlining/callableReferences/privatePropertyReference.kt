@@ -1,11 +1,11 @@
 // FILE: 1.kt
+// LANGUAGE_VERSION: 1.2
 // SKIP_INLINE_CHECK_IN: inlineFun$default
 package test
 
-fun ok() = "OK"
+private val ok = "OK"
 
-@Suppress("NOT_YET_SUPPORTED_IN_INLINE")
-inline fun inlineFun(lambda: () -> String = ::ok): String {
+internal inline fun inlineFun(lambda: () -> String = ::ok): String {
     return lambda()
 }
 
