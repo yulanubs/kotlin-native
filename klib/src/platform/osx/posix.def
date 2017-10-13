@@ -12,7 +12,7 @@ headers = alloca.h ar.h assert.h complex.h dirent.h dlfcn.h err.h errno.h fcntl.
     sys/queue.h sys/select.h sys/shm.h sys/stat.h \
     sys/syslimits.h sys/time.h sys/times.h sys/utsname.h sys/wait.h
 
-compilerOpts = -D_XOPEN_SOURCE
+compilerOpts = -D_XOPEN_SOURCE -DSHARED_LIBBIND -D_ANSI_SOURCE
 linkerOpts = -ldl -lresolv
 
 ---
