@@ -69,7 +69,7 @@ class LibraryReaderImpl(var libraryFile: File, val currentAbiVersion: Int,
         get() = manifestProperties.propertyList("linkerOpts", target!!.detailedName)
 
     override val dependencies: List<String>
-        get() = manifestProperties.propertyList("dependencies")
+        get() = manifestProperties.propertyList("depends")
 
     override val moduleHeaderData: ByteArray by lazy {
         reader.loadSerializedModule()

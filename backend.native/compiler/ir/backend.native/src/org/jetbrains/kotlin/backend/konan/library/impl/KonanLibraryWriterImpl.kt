@@ -87,7 +87,7 @@ class LibraryWriterImpl(override val libDir: File, moduleName: String, currentAb
 
     override fun addLinkDependencies(libraries: List<KonanLibraryReader>) {
         if (libraries.isEmpty()) return
-        manifestProperties.setProperty("dependencies", libraries .map { it.uniqueName } . joinToString(" "))
+        manifestProperties.setProperty("depends", libraries .map { it.uniqueName } . joinToString(" "))
     }
 
     override fun addManifestAddend(path: String) {
