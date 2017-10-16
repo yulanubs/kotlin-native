@@ -800,7 +800,7 @@ class StubGenerator(
             }
         }
 
-        nativeIndex.globals.forEach {
+        nativeIndex.globals.filter { it.name !in excludedFunctions }.forEach {
             try {
                 stubs.add(
                         GlobalVariableStub(it, this)
