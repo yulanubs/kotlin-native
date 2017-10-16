@@ -5,14 +5,9 @@ headers = objc/List.h objc/NSObjCRuntime.h objc/NSObject.h objc/Object.h objc/Pr
     objc/objc-class.h objc/objc-exception.h objc/objc-load.h objc/objc-runtime.h \
     objc/objc-sync.h objc/objc.h objc/runtime.h
 
-excludedFunctions = KERNEL_AUDIT_TOKEN KERNEL_SECURITY_TOKEN add_profil             \
-                    addrsel_policy_init                                             \
-		    getdirentries_is_not_available_when_64_bit_inodes_are_in_effect \
-		    in6addr_linklocal_allv2routers                                  \
-		    pfctlinput regwnexec_l res_send_setqhook res_send_setrhook      \
-		    unwhiteout zopen profil
-
 compilerOpts = -D_XOPEN_SOURCE
+excludedFunctions = KERNEL_AUDIT_TOKEN KERNEL_SECURITY_TOKEN
+
 linkerOpts = -lobjc
 depends = posix
 ---
